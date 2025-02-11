@@ -6,18 +6,18 @@ create table Person (
 );
 
 create table Day (
-    id integer primary key,
-    bitmask tinyint not null,
+    id tinyint primary key,
+    dayofweek integer not null,
     name varchar(10) not null
 );
 
-insert into Day values (0, 1, 'Sunday');
-insert into Day values (1, 2, 'Monday');
-insert into Day values (2, 4, 'Tuesday');
-insert into Day values (3, 8, 'Wednesday');
-insert into Day values (4, 16, 'Thursday');
-insert into Day values (5, 32, 'Friday');
-insert into Day values (6, 64, 'Saturday');
+insert into Day values (1, 0, 'Sunday');
+insert into Day values (2, 1, 'Monday');
+insert into Day values (4, 2, 'Tuesday');
+insert into Day values (8, 3, 'Wednesday');
+insert into Day values (16, 4, 'Thursday');
+insert into Day values (32, 5, 'Friday');
+insert into Day values (64, 6, 'Saturday');
 
 create table Period (
     id integer primary key autoincrement,

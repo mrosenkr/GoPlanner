@@ -5,8 +5,8 @@ CREATE TABLE Person (
     last_name varchar(100) not null
 );
 CREATE TABLE Day (
-    id integer primary key,
-    bitmask tinyint not null,
+    id tinyint primary key,
+    dayofweek integer not null,
     name varchar(10) not null
 );
 CREATE TABLE Period (
