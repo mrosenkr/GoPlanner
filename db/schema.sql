@@ -23,9 +23,11 @@ CREATE TABLE WeeklySchedule (
     id integer primary key autoincrement,
     name varchar(50),
     period_id integer not null,
+    schedule_id integer not null,
     start_time timestamp not null,
     end_time timestamp not null,
-    foreign key (period_id) references Period(id)
+    foreign key (period_id) references Period(id),
+    foreign key (schedule_id) references Schedule(id)
 );
 CREATE TABLE ScheduleBlock (
     id integer primary key autoincrement,

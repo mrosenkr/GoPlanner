@@ -57,9 +57,10 @@ type TimeSlot struct {
 }
 
 type WeeklySchedule struct {
-	ID        int64
-	Name      sql.NullString
-	PeriodID  int64
-	StartTime time.Time
-	EndTime   time.Time
+	ID         int64
+	Name       sql.NullString
+	PeriodID   int64
+	ScheduleID int64
+	StartTime  time.Time
+	EndTime    time.Time
 }

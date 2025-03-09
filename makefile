@@ -1,8 +1,8 @@
 build:
 	dbmate dump
 	sqlc generate
-	go build
+	go build -o bin/goplanner.exe ./cmd/app/main.go
 
 run:
-	goplanner.exe
+	bin/goplanner.exe
 
